@@ -245,14 +245,14 @@ if(EXISTS "${PROJECT_SOURCE_DIR}/.git")
     endif()
 
     # add git hooks
-    if (EXISTS "${PROJECT_SOURCE_DIR}/tools/hooks/")
-        set(GIT_HOOK_SRC "${PROJECT_SOURCE_DIR}/tools/hooks/")
-        if(EXISTS "${PROJECT_SOURCE_DIR}/.git/hooks")
-            set(GIT_HOOK_DST "${PROJECT_SOURCE_DIR}/.git/hooks/")
-            file(COPY ${GIT_HOOK_SRC} DESTINATION ${GIT_HOOK_DST})
-            message(STATUS "Install git hooks done")
-        endif(EXISTS "${PROJECT_SOURCE_DIR}/.git/hooks")
-    endif(EXISTS "${PROJECT_SOURCE_DIR}/tools/hooks/")
+    # if (EXISTS "${PROJECT_SOURCE_DIR}/tools/hooks/")
+    #     set(GIT_HOOK_SRC "${PROJECT_SOURCE_DIR}/tools/hooks/")
+    #     if(EXISTS "${PROJECT_SOURCE_DIR}/.git/hooks")
+    #         set(GIT_HOOK_DST "${PROJECT_SOURCE_DIR}/.git/hooks")
+    #         file(COPY ${GIT_HOOK_SRC} DESTINATION ${GIT_HOOK_DST})
+    #         message(STATUS "Install git hooks done")
+    #     endif(EXISTS "${PROJECT_SOURCE_DIR}/.git/hooks")
+    # endif(EXISTS "${PROJECT_SOURCE_DIR}/tools/hooks/")
 endif(EXISTS "${PROJECT_SOURCE_DIR}/.git")
 
 configure_file(
